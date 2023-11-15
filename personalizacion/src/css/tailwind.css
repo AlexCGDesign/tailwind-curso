@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    h1 {
+        @apply text-3xl font-bold;
+    }
+}
+
+@layer components {
+    .boton {
+        @apply bg-green-600 inline-block py-4 px-8 text-white rounded-md;
+    }
+
+    .wrapper {
+        @apply w-[90%] mx-auto max-w-screen-xl overflow-hidden;
+    }
+}
+
+@layer utilities {
+
+    .bg-image-center {
+        @apply bg-cover bg-center;
+    }
+
+}

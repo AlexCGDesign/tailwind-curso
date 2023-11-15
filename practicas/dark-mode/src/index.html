@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Dark Mode / Light Mode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/estilos.css">
+
+
+  <script>
+
+    const storageThemeValue = localStorage.getItem('theme');
+    const systemColorScheme = window.matchMedia(('(prefers-color-scheme: dark)')).matches ? 'dark' : 'light';
+
+    const newThemePage = storageThemeValue ?? systemColorScheme;
+    
+    document.documentElement.setAttribute('data-theme', newThemePage);
+
+
+  </script>
+
+
+</head>
+<body class="font-inter bg-white before:absolute before:inset-x-0 before:0 before:h-96 before:bg-very-pale-blue before:-z-10
+ text-very-dark-blue
+  dark:bg-very-dark-blue
+  dark:before:bg-very-dark-blue-top
+  dark:text-white
+ ">
+
+
+  <main class="w-[90%] max-w-screen-xl mx-auto overflow-hidden py-16">
+
+    <h1 class="text-3xl md:text-4xl">Social Media Dashboard</h1>
+
+    <p class="text-dark-grayish-blue font-bold mt-3 pb-6 border-b-2 dark:text-desaturated-blue md:text-xl">Total Followers: 23,004</p>
+
+    <div class="flex items-center justify-between pt-6">
+
+      <p class="text-dark-grayish-blue font-bold dark:text-desaturated-blue md:text-xl">Dark Mode</p>
+
+      <input type="checkbox" id="switch" class="peer hidden" data-id="switch-theme">
+
+      <label for="switch" class="
+      w-16 h-8 flex items-center flex-row-reverse p-2 rounded-full cursor-pointer 
+      bg-[hsl(230,22%,74%)] 
+      
+      peer-checked:bg-gradient-to-r
+      from-gradient-switch-first
+       to-gradient-switch-second
+      
+      peer-checked:[--bg-circle:hsl(228,28%,20%)]
+      peer-checked:[--transform-circle:-100%]
+      ">
+
+        <div class="bg-[var(--bg-circle,white)] w-1/2 aspect-square rounded-full 
+        translate-x-[var(--transform-circle)] transition-transform"></div>
+      
+      </label>
+
+    </div>
+
+    <section class="py-16 grid justify-items-center gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+      <article class="bg-light-grayish-blue rounded-lg py-8 px-4 space-y-6 w-full max-w-md relative text-dark-grayish-blue 
+      before:absolute before:inset-x-0 before:top-0 before:h-2 before:bg-facebook before:rounded-t-lg
+      
+      dark:bg-dark-desatured-blue
+      dark:text-desaturated-blue
+
+      ">
+
+        <p class="flex items-center justify-center gap-2 font-bold">
+          <img src="./images/icon-facebook.svg">
+          @nathanf
+        </p>
+
+        <div class="text-center">
+
+          <h3 class="text-4xl text-very-dark-blue mb-2n dark:text-white">1987</h3>
+          <p class="text-xl uppercase">Followers</p>
+
+        </div>
+
+        <p class="text-lime-green flex items-center justify-center font-bold gap-2">
+          <img src="./images/icon-up.svg">
+          12 Today
+        </p>
+
+      </article>
+
+      <article class="bg-light-grayish-blue rounded-lg py-8 px-4 space-y-6 w-full max-w-md relative text-dark-grayish-blue 
+      before:absolute before:inset-x-0 before:top-0 before:h-2 before:bg-twitter before:rounded-t-lg
+      
+      dark:bg-dark-desatured-blue
+      dark:text-desaturated-blue
+
+      ">
+
+        <p class="flex items-center justify-center gap-2 font-bold">
+          <img src="./images/icon-twitter.svg">
+          @nathanf
+        </p>
+
+        <div class="text-center">
+
+          <h3 class="text-4xl text-very-dark-blue mb-2n dark:text-white">1044</h3>
+          <p class="text-xl uppercase">Followers</p>
+
+        </div>
+
+        <p class="text-lime-green flex items-center justify-center font-bold gap-2">
+          <img src="./images/icon-up.svg">
+          99 Today
+        </p>
+
+      </article>
+
+      <article class="bg-light-grayish-blue rounded-lg py-8 px-4 space-y-6 w-full max-w-md relative text-dark-grayish-blue 
+      before:absolute before:inset-x-0 before:top-0 before:h-2 before:bg-gradient-to-r 
+      before:from-instagram-first before:to-instagram-second
+      before:rounded-t-lg
+      
+      dark:bg-dark-desatured-blue
+      dark:text-desaturated-blue
+
+      ">
+
+        <p class="flex items-center justify-center gap-2 font-bold">
+          <img src="./images/icon-instagram.svg">
+          @realnathanf
+        </p>
+
+        <div class="text-center">
+
+          <h3 class="text-4xl text-very-dark-blue mb-2n dark:text-white">11k</h3>
+          <p class="text-xl uppercase">Followers</p>
+
+        </div>
+
+        <p class="text-lime-green flex items-center justify-center font-bold gap-2">
+          <img src="./images/icon-up.svg">
+          1099 Today
+        </p>
+
+      </article>
+
+      <article class="bg-light-grayish-blue rounded-lg py-8 px-4 space-y-6 w-full max-w-md relative text-dark-grayish-blue 
+      before:absolute before:inset-x-0 before:top-0 before:h-2 before:bg-youtube
+      before:rounded-t-lg
+      
+      dark:bg-dark-desatured-blue
+      dark:text-desaturated-blue
+
+      ">
+
+        <p class="flex items-center justify-center gap-2 font-bold">
+          <img src="./images/icon-youtube.svg">
+          Nathan F.
+        </p>
+
+        <div class="text-center">
+
+          <h3 class="text-4xl text-very-dark-blue mb-2n dark:text-white">8239</h3>
+          <p class="text-xl uppercase">Followers</p>
+
+        </div>
+
+        <p class="text-bright-red flex items-center justify-center font-bold gap-2">
+          <img src="./images/icon-down.svg">
+          144 Today
+        </p>
+
+      </article>
+
+    </section>
+
+    <section class="pt-8">
+
+      <h2 class="text-3xl md:text-4xl mb-8">Overview - Today</h2>
+
+      <div class="grid gap-6 justify-items-center md:grid-cols-3 lg:grid-cols-4">
+
+        <article class="card-stats bg-light-grayish-blue p-6 rounded-lg max-w-sm w-full dark:bg-dark-desatured-blue">
+
+          <h3 class="text-dark-grayish-blue text-lg dark:text-desaturated-blue"> Page Views</h3>
+
+          <img src="./images/icon-facebook.svg" class="justify-self-end">
+
+          <p class="text-3xl font-bold">87</p>
+
+          <p class="text-lime-green flex items-center justify-center font-bold gap-2">
+            <img src="./images/icon-up.svg">
+            3%
+          </p>
+
+        </article>
+
+        <article class="card-stats bg-light-grayish-blue p-6 rounded-lg max-w-sm w-full dark:bg-dark-desatured-blue">
+
+          <h3 class="text-dark-grayish-blue text-lg  dark:text-desaturated-blue">Likes</h3>
+  
+          <img src="./images/icon-facebook.svg" class="justify-self-end">
+  
+          <p class="text-3xl font-bold">67</p>
+  
+          <p class="text-bright-red flex items-center justify-center font-bold gap-2">
+            <img src="./images/icon-down.svg" >
+            2%
+          </p>
+  
+        </article>
+
+        <article class="card-stats bg-light-grayish-blue p-6 rounded-lg max-w-sm w-full dark:bg-dark-desatured-blue">
+
+          <h3 class="text-dark-grayish-blue text-lg dark:text-desaturated-blue">Likes</h3>
+  
+          <img src="./images/icon-instagram.svg" class="justify-self-end">
+  
+          <p class="text-3xl font-bold">5462</p>
+  
+          <p class="text-lime-green flex items-center justify-center font-bold gap-2">
+            <img src="./images/icon-up.svg" >
+            2257%
+          </p>
+  
+        </article>
+
+        <article class="card-stats bg-light-grayish-blue p-6 rounded-lg max-w-sm w-full dark:bg-dark-desatured-blue">
+
+          <h3 class="text-dark-grayish-blue text-lg dark:text-desaturated-blue">Profile Views</h3>
+  
+          <img src="./images/icon-instagram.svg" class="justify-self-end">
+  
+          <p class="text-3xl font-bold">52k</p>
+  
+          <p class="text-lime-green flex items-center justify-center font-bold gap-2">
+            <img src="./images/icon-up.svg" >
+            1375%
+          </p>
+  
+        </article>
+        
+        <article class="card-stats bg-light-grayish-blue p-6 rounded-lg max-w-sm w-full dark:bg-dark-desatured-blue">
+
+          <h3 class="text-dark-grayish-blue text-lg dark:text-desaturated-blue">Retweets</h3>
+  
+          <img src="./images/icon-twitter.svg" class="justify-self-end">
+  
+          <p class="text-3xl font-bold">117</p>
+  
+          <p class="text-lime-green flex items-center justify-center font-bold gap-2">
+            <img src="./images/icon-up.svg" >
+            303%
+          </p>
+  
+        </article>
+
+        <article class="card-stats bg-light-grayish-blue p-6 rounded-lg max-w-sm w-full dark:bg-dark-desatured-blue">
+
+          <h3 class="text-dark-grayish-blue text-lg dark:text-desaturated-blue">Likes</h3>
+  
+          <img src="./images/icon-twitter.svg" class="justify-self-end">
+  
+          <p class="text-3xl font-bold">507</p>
+  
+          <p class="text-lime-green flex items-center justify-center font-bold gap-2">
+            <img src="./images/icon-up.svg" >
+            553%
+          </p>
+  
+        </article>
+
+        <article class="card-stats bg-light-grayish-blue p-6 rounded-lg max-w-sm w-full dark:bg-dark-desatured-blue">
+
+          <h3 class="text-dark-grayish-blue text-lg dark:text-desaturated-blue">Likes</h3>
+  
+          <img src="./images/icon-youtube.svg" class="justify-self-end">
+  
+          <p class="text-3xl font-bold">107</p>
+  
+          <p class="text-bright-red flex items-center justify-center font-bold gap-2">
+            <img src="./images/icon-down.svg" >
+            19%
+          </p>
+  
+        </article>
+
+        <article class="card-stats bg-light-grayish-blue p-6 rounded-lg max-w-sm w-full dark:bg-dark-desatured-blue">
+
+          <h3 class="text-dark-grayish-blue text-lg dark:text-desaturated-blue">Total Views</h3>
+  
+          <img src="./images/icon-youtube.svg" class="justify-self-end">
+  
+          <p class="text-3xl font-bold">1407</p>
+  
+          <p class="text-bright-red flex items-center justify-center font-bold gap-2">
+            <img src="./images/icon-down.svg" >
+            12%
+          </p>
+  
+        </article>
+
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="./app.js"></script>
+</body>
+</html>

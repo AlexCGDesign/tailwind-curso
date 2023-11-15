@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    h1, h2, h3, h4, h5, h6{
+        @apply font-bold;
+    }
+
+    input, textarea{
+        @apply bg-color-background border-gray-color;
+    }
+}
+
+@layer components{
+    .icons-container{
+        @apply p-4 w-max aspect-square bg-card-color rounded-full;
+    }
+
+    .icons{
+        @apply fill-green-color w-10;
+    }
+
+    .focus-input{
+        @apply outline-none focus:ring-1 focus:ring-green-color focus:ring-inset transition;
+    }
+}
+
+@layer utilities{
+
+    .clip-circle-0{
+        clip-path: circle(0% at top right);
+    }
+
+    .clip-circle-full{
+        clip-path: circle(150% at top right);
+    }
+
+
+}
